@@ -1,6 +1,6 @@
 {
-  "name": "blockchain-addressbook",
-  "version": "0.3.36",
+  "name": "moofi-addressbook",
+  "version": "0.3.22",
   "description": "A collection of useful addresses on various chains for defi development",
   "main": "build/address-book/index.js",
   "types": "build/address-book/index.d.ts",
@@ -9,7 +9,7 @@
     "build/util/",
     "build/types/"
   ],
-  "repository": "beefyfinance/beefy-api",
+  "repository": "MoofiApp/moofi-api",
   "license": "MIT",
   "scripts": {
     "compile": "tsc",

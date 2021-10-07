@@ -7,15 +7,7 @@ import transformTokenListToObject from '../util/transfomTokenListToObject';
 import chainIdMap from '../util/chainIdMap';
 
 const tokenLists = {
-  bsc: ['https://gateway.pinata.cloud/ipfs/QmdKy1K5TMzSHncLzUXUJdvKi1tHRmJocDRfmCXxW5mshS'],
-  quickswap: [
-    'https://unpkg.com/quickswap-default-token-list@1.0.59/build/quickswap-default.tokenlist.json',
-  ],
-  avax: [
-    'https://raw.githubusercontent.com/pangolindex/tokenlists/main/aeb.tokenlist.json',
-    'https://raw.githubusercontent.com/pangolindex/tokenlists/main/defi.tokenlist.json',
-    'https://raw.githubusercontent.com/pangolindex/tokenlists/main/stablecoin.tokenlist.json',
-  ],
+  moonriver: ['https://raw.githubusercontent.com/moonfarmin/tokenlist/master/tokens.json'],
 };
 
 const toChecksumTokenList = (tokens: Token[]): void => {
@@ -25,11 +17,11 @@ const toChecksumTokenList = (tokens: Token[]): void => {
 };
 
 (async () => {
-  const chainId = chainIdMap.bsc;
+  const chainId = chainIdMap.moonriver;
   let tokens: Token[] = [];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let tokenListFinal: any;
-  for (const tokenList of tokenLists.bsc) {
+  for (const tokenList of tokenLists.moonriver) {
     const response = await fetch(tokenList);
     const tokenListTmp = (await response.json()) as unknown as TokenList;
     tokenListFinal = tokenListTmp;

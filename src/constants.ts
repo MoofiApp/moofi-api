@@ -2,6 +2,10 @@ import { ChainId } from '../packages/address-book/address-book';
 
 const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:3000';
 
+type Environment = 'development' | 'prodution';
+
+const ENV: Environment = process.env.NODE_ENV as Environment;
+
 const BASE_HPY = 2190;
 const MINUTELY_HPY = 525600;
 const HOURLY_HPY = 8760;
@@ -41,14 +45,9 @@ const POLYGON_RPC = process.env.POLYGON_RPC || 'https://rpc-mainnet.maticvigil.c
 const FANTOM_RPC = process.env.FANTOM_RPC || 'https://rpc.ftm.tools';
 const ONE_RPC = process.env.ONE_RPC || 'https://api.s0.t.hmny.io/';
 const ARBITRUM_RPC = process.env.ARBITRUM_RPC || 'https://arb1.arbitrum.io/rpc';
+const MOONRIVER_RPC = process.env.MOONRIVER_RPC || 'https://rpc.moonriver.moonbeam.network';
 
-const BSC_CHAIN_ID = ChainId.bsc;
-const HECO_CHAIN_ID = ChainId.heco;
-const POLYGON_CHAIN_ID = ChainId.polygon;
-const AVAX_CHAIN_ID = ChainId.avax;
-const FANTOM_CHAIN_ID = ChainId.fantom;
-const ONE_CHAIN_ID = ChainId.one;
-const ARBITRUM_CHAIN_ID = ChainId.arbitrum;
+const MOONRIVER_CHAIN_ID = ChainId.moonriver;
 
 const DFYN_LPF = 0.003;
 const SUSHI_LPF = 0.0025;
@@ -58,40 +57,17 @@ const COMETH_LPF = 0.005;
 const PCS_LPF = 0.003;
 const APE_LPF = 0.002;
 const SPOOKY_LPF = 0.002;
+const MOON_LPF = 0.003;
 
 const MULTICHAIN_RPC: Record<ChainId, string> = {
-  [ChainId.bsc]: BSC_RPC,
-  [ChainId.heco]: HECO_RPC,
-  [ChainId.polygon]: POLYGON_RPC,
-  [ChainId.avax]: AVAX_RPC,
-  [ChainId.fantom]: FANTOM_RPC,
-  [ChainId.one]: ONE_RPC,
-  [ChainId.arbitrum]: ARBITRUM_RPC,
+  [ChainId.moonriver]: MOONRIVER_RPC,
 };
 
-const BSC_VAULTS_ENDPOINT =
-  'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/features/configure/vault/bsc_pools.js';
-const HECO_VAULTS_ENDPOINT =
-  'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/features/configure/vault/heco_pools.js';
-const AVAX_VAULTS_ENDPOINT =
-  'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/features/configure/vault/avalanche_pools.js';
-const POLYGON_VAULTS_ENDPOINT =
-  'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/features/configure/vault/polygon_pools.js';
-const FANTOM_VAULTS_ENDPOINT =
-  'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/features/configure/vault/fantom_pools.js';
-const ONE_VAULTS_ENDPOINT =
-  'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/features/configure/vault/harmony_pools.js';
-const ARBITRUM_VAULTS_ENDPOINT =
-  'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/features/configure/vault/arbitrum_pools.js';
+const MOONRIVER_VAULTS_ENDPOINT =
+  'https://raw.githubusercontent.com/MoofiApp/moofi-app/master/src/features/configure/vault/moonriver_pools.js';
 
 const MULTICHAIN_ENDPOINTS = {
-  bsc: BSC_VAULTS_ENDPOINT,
-  heco: HECO_VAULTS_ENDPOINT,
-  avax: AVAX_VAULTS_ENDPOINT,
-  polygon: POLYGON_VAULTS_ENDPOINT,
-  fantom: FANTOM_VAULTS_ENDPOINT,
-  one: ONE_VAULTS_ENDPOINT,
-  arbitrum: ARBITRUM_VAULTS_ENDPOINT,
+  moonriver: MOONRIVER_VAULTS_ENDPOINT,
 };
 
 const BEEFY_PERFORMANCE_FEE = 0.045;
@@ -101,26 +77,15 @@ export {
   API_BASE_URL,
   BSC_RPC,
   BSC_RPC_ENDPOINTS,
-  BSC_CHAIN_ID,
-  BSC_VAULTS_ENDPOINT,
   HECO_RPC,
-  HECO_CHAIN_ID,
-  HECO_VAULTS_ENDPOINT,
   AVAX_RPC,
-  AVAX_CHAIN_ID,
-  AVAX_VAULTS_ENDPOINT,
   POLYGON_RPC,
-  POLYGON_CHAIN_ID,
-  POLYGON_VAULTS_ENDPOINT,
   FANTOM_RPC,
-  FANTOM_CHAIN_ID,
-  FANTOM_VAULTS_ENDPOINT,
   ONE_RPC,
-  ONE_CHAIN_ID,
-  ONE_VAULTS_ENDPOINT,
   ARBITRUM_RPC,
-  ARBITRUM_CHAIN_ID,
-  ARBITRUM_VAULTS_ENDPOINT,
+  MOONRIVER_RPC,
+  MOONRIVER_CHAIN_ID,
+  MOONRIVER_VAULTS_ENDPOINT,
   BASE_HPY,
   MINUTELY_HPY,
   HOURLY_HPY,
@@ -139,6 +104,8 @@ export {
   PCS_LPF,
   APE_LPF,
   SPOOKY_LPF,
+  MOON_LPF,
   BEEFY_PERFORMANCE_FEE,
   SHARE_AFTER_PERFORMANCE_FEE,
+  ENV,
 };

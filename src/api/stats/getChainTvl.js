@@ -4,7 +4,7 @@ const { web3Factory, multicallAddress } = require('../../utils/web3');
 const getVaults = require('../../utils/getVaults.js');
 const fetchPrice = require('../../utils/fetchPrice');
 
-const BeefyVaultV6ABI = require('../../abis/BeefyVaultV6.json');
+const MofiVaultV6ABI = require('../../abis/MofiVault.json');
 
 const getChainTvl = async chain => {
   const chainId = chain.chainId;
@@ -38,7 +38,7 @@ const getVaultBalances = async (chainId, vaults) => {
   const multicall = new MultiCall(web3, multicallAddress(chainId));
   const balanceCalls = [];
   vaults.forEach(vault => {
-    const vaultContract = new web3.eth.Contract(BeefyVaultV6ABI, vault.earnedTokenAddress);
+    const vaultContract = new web3.eth.Contract(MofiVaultV6ABI, vault.earnedTokenAddress);
     balanceCalls.push({
       balance: vaultContract.methods.balance(),
     });

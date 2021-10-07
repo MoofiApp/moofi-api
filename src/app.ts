@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config();
+
 const Koa = require('koa');
 const helmet = require('koa-helmet');
 const body = require('koa-bodyparser');
@@ -26,6 +28,6 @@ app.context.cache = {};
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 app.listen(port);
 console.log(`> beefy-api running! (:${port})`);

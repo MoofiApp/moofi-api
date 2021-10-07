@@ -36,7 +36,7 @@ jobs:
       - run: yarn compile
       # bump package version and commit. Note that this won't create an infinite github action push loop, as we have added package.json to paths-ignore.
       - name: 'Automated Version Bump'
-        uses: 'phips28/gh-action-bump-version@v8.0.18'
+        uses: 'phips28/gh-action-bump-version@v9.0.1'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PACKAGEJSON_DIR: 'packages/address-book'
