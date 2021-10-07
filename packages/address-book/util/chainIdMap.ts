@@ -1,5 +1,5 @@
 const chainIdMap = {
-  arbitrum: 42161,
+  moonriver: 1285,
 };
 
 export default chainIdMap;
