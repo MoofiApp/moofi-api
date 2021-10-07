@@ -52,7 +52,6 @@ export const validateAllAddressesChecksum = (): InvalidAddressInfo[][] => {
 
       const isValid = isValidChecksumAddress(address);
       const correctAddress = address ? toChecksumAddress(address) : '';
-      console.log('DUPA1', address, isValid, tokenName, correctAddress);
       if (!isValid) {
         invalidTokenAddressList.push({
           chainName,
