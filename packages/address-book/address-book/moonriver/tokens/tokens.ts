@@ -14,7 +14,7 @@ const MOVR = {
 const _tokens = {
   USDC: {
     name: 'USD Coin',
-    address: '0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d',
+    address: '0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D',
     symbol: 'USDC',
     decimals: 6,
     website: 'https://www.circle.com/usdc',
@@ -26,7 +26,7 @@ const _tokens = {
   DAI: {
     name: 'Dai Token',
     symbol: 'DAI',
-    address: '0x80a16016cc4a2e6a2caca8a4a498b1699ff0f844',
+    address: '0x80A16016cC4A2E6a2CACA8a4a498b1699fF0f844',
     chainId: 1285,
     decimals: 18,
     website: 'https://makerdao.com/en/',
@@ -36,11 +36,11 @@ const _tokens = {
       'https://exchange.pancakeswap.finance/images/coins/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3.png',
   },
   MOVR,
-  WAVAX: MOVR,
+  WMOVR: MOVR,
   WNATIVE: MOVR,
   ETH: {
     chainId: 1285,
-    address: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
+    address: '0x639A647fbe20b6c8ac19E48E2de44ea792c62c5C',
     decimals: 18,
     name: 'Ether',
     symbol: 'ETH',

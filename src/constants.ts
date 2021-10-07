@@ -64,7 +64,7 @@ const MULTICHAIN_RPC: Record<ChainId, string> = {
 };
 
 const MOONRIVER_VAULTS_ENDPOINT =
-  'https://raw.githubusercontent.com/paweljaneczek/beefy-app/feature/mofi/src/features/configure/vault/moonriver_pools.js';
+  'https://raw.githubusercontent.com/MoofiApp/moofi-app/master/src/features/configure/vault/moonriver_pools.js';
 
 const MULTICHAIN_ENDPOINTS = {
   moonriver: MOONRIVER_VAULTS_ENDPOINT,

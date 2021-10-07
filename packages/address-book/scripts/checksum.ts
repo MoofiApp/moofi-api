@@ -52,6 +52,7 @@ export const validateAllAddressesChecksum = (): InvalidAddressInfo[][] => {
 
       const isValid = isValidChecksumAddress(address);
       const correctAddress = address ? toChecksumAddress(address) : '';
+      console.log('DUPA1', address, isValid, tokenName, correctAddress);
       if (!isValid) {
         invalidTokenAddressList.push({
           chainName,
@@ -67,41 +68,39 @@ export const validateAllAddressesChecksum = (): InvalidAddressInfo[][] => {
 };
 
 const [invalidPlatformAddressList, invalidTokenAddressList] = validateAllAddressesChecksum();
-const fail = false;
+let fail = false;
 if (invalidPlatformAddressList.length > 0) {
-  // TODO uncomment
-  // for (const invalid of invalidPlatformAddressList) {
-  //   const { chainName, platformName, address, addressName, correctAddress } = invalid;
-  //   if (!invalid.address) {
-  //     // (it's a placeholder)
-  //     console.log(
-  //       `Address '${addressName}' on platform '${platformName}' on chain '${chainName}' is missing`
-  //     );
-  //   } else {
-  //     console.log(
-  //       `Address '${addressName}' on platform '${platformName}' on chain '${chainName}' does not pass checksum. Incorrect Address: '${address}'`
-  //     );
-  //     console.log(`The correct address should be '${correctAddress}'`);
-  //   }
-  // }
-  // fail = true;
+  for (const invalid of invalidPlatformAddressList) {
+    const { chainName, platformName, address, addressName, correctAddress } = invalid;
+    if (!invalid.address) {
+      // (it's a placeholder)
+      console.log(
+        `Address '${addressName}' on platform '${platformName}' on chain '${chainName}' is missing`
+      );
+    } else {
+      console.log(
+        `Address '${addressName}' on platform '${platformName}' on chain '${chainName}' does not pass checksum. Incorrect Address: '${address}'`
+      );
+      console.log(`The correct address should be '${correctAddress}'`);
+    }
+  }
+  fail = true;
 }
 
 if (invalidTokenAddressList.length > 0) {
-  // TODO uncomment
-  // for (const invalid of invalidTokenAddressList) {
-  //   const { chainName, address, addressName, correctAddress } = invalid;
-  //   if (!invalid.address) {
-  //     // (it's a placeholder)
-  //     console.log(`Token address '${addressName}' on chain '${chainName}' is missing`);
-  //   } else {
-  //     console.log(
-  //       `Token address '${addressName}' on chain '${chainName}' does not pass checksum. Incorrect Address: '${address}'`
-  //     );
-  //     console.log(`The correct address should be '${correctAddress}'`);
-  //   }
-  // }
-  // fail = true;
+  for (const invalid of invalidTokenAddressList) {
+    const { chainName, address, addressName, correctAddress } = invalid;
+    if (!invalid.address) {
+      // (it's a placeholder)
+      console.log(`Token address '${addressName}' on chain '${chainName}' is missing`);
+    } else {
+      console.log(
+        `Token address '${addressName}' on chain '${chainName}' does not pass checksum. Incorrect Address: '${address}'`
+      );
+      console.log(`The correct address should be '${correctAddress}'`);
+    }
+  }
+  fail = true;
 }
 
 if (fail) {
