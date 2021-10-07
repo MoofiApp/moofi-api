@@ -3,17 +3,11 @@ const { MULTICHAIN_RPC } = require('../constants');
 import { ChainId } from '../../packages/address-book/address-book';
 
 const MULTICALLS = {
-  bsc: '0x88A3fB4Dcb566ee39ec3a03d412682536F9941e6',
-  heco: '0xaa5a5AD8a27fEd7F791952705ce90134eac620dc',
-  polygon: '0x78E156a612a7e907E4cF4340c9261608B0C19FEF',
-  fantom: '0x167615dBA34c173efF4b7ba7178fE174b472429D',
-  avax: '0x5135C0af3080DF01ABF66491d5a1eD21fBEF3a7C',
-  one: '0x4980548079A98e13F9507b5e2084FC6feFB8e086',
-  arbitrum: '0x8a198BCbF313A5565c64A7Ed61FaA413eB4E0931',
+  moonriver: '0x80dFB4FDFEC993Fcf3C27645b34DA1BCBa38c70B',
 };
 const BATCH_SIZE = 128;
 
-const MulticallAbi = require('../abis/BeefyStrategyMulticall.json');
+const MulticallAbi = require('../abis/MofiStrategyMulticall.json');
 
 const getStrategies = async (vaults, chain) => {
   // Setup multichain

@@ -1,0 +1,40 @@
+[
+  {
+    "name": "moonfarm-moon-usdc",
+    "address": "0x5964a6C85a2F88e01F28F066eA36Dc158864c638",
+    "decimals": "1e18",
+    "poolId": 20,
+    "chainId": 1285,
+    "lp0": {
+      "address": "0xb497c3e9d27ba6b1fea9f1b941d8c79e66cfc9d6",
+      "oracle": "tokens",
+      "oracleId": "MOON",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
+      "oracle": "tokens",
+      "oracleId": "USDC",
+      "decimals": "1e6"
+    }
+  },
+  {
+    "name": "moonfarm-dai-usdc",
+    "address": "0x07866497aAF2E8B201300759720C5Ac873DbF0e7",
+    "decimals": "1e18",
+    "poolId": 26,
+    "chainId": 1285,
+    "lp0": {
+      "address": "0x80A16016cC4A2E6a2CACA8a4a498b1699fF0f844",
+      "oracle": "tokens",
+      "oracleId": "DAI",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
+      "oracle": "tokens",
+      "oracleId": "USDC",
+      "decimals": "1e6"
+    }
+  }
+]

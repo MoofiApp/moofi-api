@@ -1,5 +1,5 @@
 import { ChainId } from '../packages/address-book/address-book';
-import { spookyswap } from '../packages/address-book/address-book/fantom/platforms/spookyswap';
+import { moonfarm } from '../packages/address-book/address-book/moonriver/platforms/moonfarm';
 
 const yargs = require('yargs');
 const fs = require('fs');
@@ -13,35 +13,10 @@ const LPPairABI = require('../src/abis/LPPair.json');
 const ERC20ABI = require('../src/abis/ERC20.json');
 
 const projects = {
-  pancake: {
-    prefix: 'cakev2',
-    file: '../src/data/cakeLpPools.json',
-    masterchef: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
-  },
-  wault: {
-    prefix: 'wex',
-    file: '../src/data/waultLpPools.json',
-    masterchef: '0x22fB2663C7ca71Adc2cc99481C77Aaf21E152e2D',
-  },
-  mdex: {
-    prefix: 'mdex-bsc',
-    file: '../src/data/mdexBscLpPools.json',
-    masterchef: '0xc48FE252Aa631017dF253578B1405ea399728A50',
-  },
-  ape: {
-    prefix: 'banana',
-    file: '../src/data/degens/apeLpPools.json',
-    masterchef: '0x5c8D727b265DBAfaba67E050f2f739cAeEB4A6F9',
-  },
-  joe: {
-    prefix: 'joe',
-    file: '../src/data/avax/joeLpPools.json',
-    masterchef: '0xd6a4F121CA35509aF06A0Be99093d08462f53052',
-  },
-  spooky: {
-    prefix: 'boo',
-    file: '../src/data/fantom/spookyLpPools.json',
-    masterchef: spookyswap.masterchef,
+  moonfarm: {
+    prefix: 'moonfarm',
+    file: '../src/data/moonriver/moonfarmLpPools.json',
+    masterchef: moonfarm.masterchef,
   },
 };
 

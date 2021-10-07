@@ -14,7 +14,7 @@ export interface LpPool {
   lp1: LpToken;
   oracle?: string;
   oracleId?: string;
-  depositFee?: number;
+  platformFee?: number;
 }
 
 export interface SingleAssetPool {
@@ -27,7 +27,7 @@ export interface SingleAssetPool {
   oracleId?: string;
   decimals: string;
   chainId: ChainId;
-  depositFee?: number;
+  platformFee?: number;
 }
 
 export interface LpToken {

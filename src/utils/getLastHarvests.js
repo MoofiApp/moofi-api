@@ -3,15 +3,9 @@ const { MULTICHAIN_RPC } = require('../constants');
 import { ChainId } from '../../packages/address-book/address-book';
 
 const MULTICALLS = {
-  bsc: '0xE09C534adE063222BDDC1EB5DD86bBF4bf194F90',
-  heco: '0x1b6Bc65dBd597220DD0e8d3D8f976F0D18DfffB6',
-  polygon: '0x7a4098B4a368826BBf0Ba45DAaAe8B0DE1Bf0b12',
-  fantom: '0x28373e5fF2Ea0aeabe09b2651cE6Df4Ec10982f7',
-  avax: '0x9e95635A4b603AC80e6eaD48324439e7c31c384c',
-  one: '0x42d1760e98F9fd1AcbFd77651D429BB306a3782e',
-  arbitrum: '0xF9eBb381dC153D0966B2BaEe776de2F400405755',
+  moonriver: '0xaf1AEccBF8FBA9f65A1E69369496B5097ebE50E3',
 };
-const MulticallAbi = require('../abis/BeefyLastHarvestMulticall.json');
+const MulticallAbi = require('../abis/MofiLastHarvestMulticall.json');
 const BATCH_SIZE = 128;
 
 const getLastHarvests = async (vaults, chain) => {

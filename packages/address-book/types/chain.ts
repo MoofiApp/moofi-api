@@ -1,9 +1,9 @@
-import { BeefyFinance } from './beefyfinance';
+import { Mofi } from './mofi';
 import type Token from './token';
 
 export default interface Chain {
   readonly platforms: Record<string, Record<string, unknown>> & {
-    beefyfinance: BeefyFinance;
+    mofi: Mofi;
   };
   readonly tokens: Record<string, Token>;
   readonly tokenAddressMap: Record<string, Token>;
