@@ -3,7 +3,7 @@ const { ethers } = require('ethers');
 const { MULTICHAIN_RPC } = require('../constants');
 
 const MULTICALLS = {
-  1285: '0x016d0Ec755d4A315F20E40aC9AF97F8692028E58',
+  1285: '0xAf2f137F515ddE2BBBc7088801C14F94f51E5DC8',
 };
 
 const MulticallAbi = require('../abis/MofiPriceMulticall.json');

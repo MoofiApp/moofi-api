@@ -1,13 +1,13 @@
-const devMultisig = '0x60B24173bCeBeB18D1bb5775616F36a77f8fd26e';
+const deployer = '0x8784279bdB1b634d5bEf86C92262D1775248aEE0';
+const feeReward = '0x6A90b35784c716dB7B269f2Eda2fB7e7C164Bb06';
 
 export const mofi = {
-  strategyOwner: devMultisig,
-  vaultOwner: devMultisig,
-  keeper: devMultisig,
-  rewarder: devMultisig,
-  treasurer: devMultisig,
-  launchpoolOwner: devMultisig,
-  devMultisig,
-  mofiFeeRecipient: devMultisig,
-  multicall: '0x88D9621F1055C1D60f39b836CbDF46Ec667cDD52',
+  strategyOwner: deployer,
+  vaultOwner: deployer,
+  keeper: deployer,
+  rewarder: feeReward,
+  treasurer: feeReward,
+  devMultisig: deployer,
+  mofiFeeRecipient: feeReward,
+  multicall: '0x8ecf62Cb46Ba4913d6FbDd6E74da4A6A7c40582F',
 } as const;

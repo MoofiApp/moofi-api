@@ -3,7 +3,7 @@ const { MULTICHAIN_RPC } = require('../constants');
 import { ChainId } from '../../packages/address-book/address-book';
 
 const MULTICALLS = {
-  moonriver: '0xaf1AEccBF8FBA9f65A1E69369496B5097ebE50E3',
+  moonriver: '0xc0AF4260348314b609Cca9c9E7652E8B745ddDa1',
 };
 const MulticallAbi = require('../abis/MofiLastHarvestMulticall.json');
 const BATCH_SIZE = 128;
