@@ -50,6 +50,17 @@ const _tokens = {
     logoURI:
       'https://raw.githubusercontent.com/ava-labs/bridge-tokens/main/avalanche-tokens/0xf20d962a6c8f70c731bd838a3a388D7d48fA6e15/logo.png',
   },
+  MOON: {
+    chainId: 1285,
+    address: '0xB497c3E9D27Ba6b1fea9F1b941d8C79E66cfC9d6',
+    decimals: 18,
+    name: 'MoonFarm Token',
+    symbol: 'MOON',
+    website: 'https://app.moonfarm.in/',
+    description: 'Moonfarm farm',
+    logoURI:
+      'https://raw.githubusercontent.com/moonfarmin/moonfarm-contracts-v2/master/images/moonfarm.png',
+  },
 } as const;
 
 export const tokens: ConstRecord<typeof _tokens, Token> = _tokens;
