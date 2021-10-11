@@ -61,6 +61,30 @@ const _tokens = {
     logoURI:
       'https://raw.githubusercontent.com/moonfarmin/moonfarm-contracts-v2/master/images/moonfarm.png',
   },
+  USDT: {
+    name: 'Tether USD',
+    address: '0xB44a9B6905aF7c801311e8F4E76932ee959c663C',
+    symbol: 'USDT',
+    decimals: 6,
+    website: 'https://tether.to/',
+    description:
+      'Tether is a stablecoin pegged to the US Dollar. A stablecoin is a type of cryptocurrency whose value is pegged to another fiat currency like the US Dollar or to a commodity like Gold.',
+    chainId: 1285,
+    logoURI:
+      'https://pancakeswap.finance/images/tokens/0x55d398326f99059ff775485246999027b3197955.png',
+  },
+  BUSD: {
+    name: 'BUSD Token',
+    symbol: 'BUSD',
+    address: '0x5D9ab5522c64E1F6ef5e3627ECCc093f56167818',
+    chainId: 1285,
+    decimals: 18,
+    website: 'https://www.binance.com/en/busd',
+    description:
+      'Binance USD (BUSD) is a 1:1 USD-backed stable coin issued by Binance (in partnership with Paxos), Approved and regulated by the New York State Department of Financial Services (NYDFS), The BUSD Monthly Audit Report can be viewed from the official website.',
+    logoURI:
+      'https://pancakeswap.finance/images/tokens/0xe9e7cea3dedca5984780bafc599bd69add087d56.png',
+  },
 } as const;
 
 export const tokens: ConstRecord<typeof _tokens, Token> = _tokens;
