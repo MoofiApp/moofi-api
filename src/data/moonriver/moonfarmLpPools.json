@@ -112,5 +112,62 @@
       "oracleId": "BUSD",
       "decimals": "1e18"
     }
+  },
+  {
+    "name": "moonfarm-wmovr-mswap",
+    "address": "0x66fFF9B5072CbdFb4bCe50563eC13B237d6A4972",
+    "decimals": "1e18",
+    "poolId": 1,
+    "chainId": 1285,
+    "lp0": {
+      "address": "0x98878B06940aE243284CA214f92Bb71a2b032B8A",
+      "oracle": "tokens",
+      "oracleId": "WMOVR",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0xB3FB48bF090bEDFF4f6F93FFb40221742E107db7",
+      "oracle": "tokens",
+      "oracleId": "mSWAP",
+      "decimals": "1e18"
+    }
+  },
+  {
+    "name": "moonfarm-wmovr-usdc",
+    "address": "0x74888A02891586EBecCc7B04A0F7a9b5098Daf05",
+    "decimals": "1e18",
+    "poolId": 22,
+    "chainId": 1285,
+    "lp0": {
+      "address": "0x98878B06940aE243284CA214f92Bb71a2b032B8A",
+      "oracle": "tokens",
+      "oracleId": "WMOVR",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
+      "oracle": "tokens",
+      "oracleId": "USDC",
+      "decimals": "1e6"
+    }
+  },
+  {
+    "name": "moonfarm-wmovr-moon",
+    "address": "0xf18433BbE972d8F1B2E908e3Eb6C0234C9b24E7b",
+    "decimals": "1e18",
+    "poolId": 0,
+    "chainId": 1285,
+    "lp0": {
+      "address": "0x98878B06940aE243284CA214f92Bb71a2b032B8A",
+      "oracle": "tokens",
+      "oracleId": "WMOVR",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0xb497c3e9d27ba6b1fea9f1b941d8c79e66cfc9d6",
+      "oracle": "tokens",
+      "oracleId": "MOON",
+      "decimals": "1e18"
+    }
   }
 ]

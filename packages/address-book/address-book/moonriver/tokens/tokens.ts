@@ -2,7 +2,7 @@ import { ConstRecord } from '../../../types/const';
 import Token from '../../../types/token';
 
 const MOVR = {
-  chainId: 43114,
+  chainId: 1285,
   address: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
   decimals: 18,
   name: 'Wrapped MOVR',
@@ -84,6 +84,17 @@ const _tokens = {
       'Binance USD (BUSD) is a 1:1 USD-backed stable coin issued by Binance (in partnership with Paxos), Approved and regulated by the New York State Department of Financial Services (NYDFS), The BUSD Monthly Audit Report can be viewed from the official website.',
     logoURI:
       'https://pancakeswap.finance/images/tokens/0xe9e7cea3dedca5984780bafc599bd69add087d56.png',
+  },
+  mSWAP: {
+    name: 'BUSD Token',
+    symbol: 'MoonSwap Token',
+    address: '0xB3FB48bF090bEDFF4f6F93FFb40221742E107db7',
+    chainId: 1285,
+    decimals: 18,
+    website: 'https://swap.moonswap.in/',
+    description: '',
+    logoURI:
+      'https://raw.githubusercontent.com/moonfarmin/moonfarm-contracts-v2/master/images/moonswap.png',
   },
 } as const;
 
