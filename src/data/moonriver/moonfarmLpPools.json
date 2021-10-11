@@ -36,5 +36,24 @@
       "oracleId": "USDC",
       "decimals": "1e6"
     }
+  },
+  {
+    "name": "moonfarm-busd-usdc",
+    "address": "0x7Fae055c7836D135f0E755395b0179D4d5Af3E4D",
+    "decimals": "1e18",
+    "poolId": 26,
+    "chainId": 1285,
+    "lp0": {
+      "address": "0x5D9ab5522c64E1F6ef5e3627ECCc093f56167818",
+      "oracle": "tokens",
+      "oracleId": "BUSD",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
+      "oracle": "tokens",
+      "oracleId": "USDC",
+      "decimals": "1e6"
+    }
   }
 ]
