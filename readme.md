@@ -1,6 +1,6 @@
-# Beefy API
+# Moofi API
 
-API that powers [Beefy Finance](https://app.beefy.finance). You can find the repo for the frontend [here](https://github.com/beefyfinance/beefy-app).
+API that powers [Moofi Finance](https://www.moofi.app).
 
 ---
 
@@ -27,7 +27,7 @@ yarn start
 
 ---
 
-### Consumed by the [app](https://app.beefy.finance)
+### Consumed by the [app](https://www.moofi.app)
 
 #### **/apy**
 
@@ -54,7 +54,7 @@ The new version of the APY endpoint, broken down into component parts when they 
   "cometh-must-eth": {
     "vaultApr": 1.186973388240745,
     "compoundingsPerYear": 2190,
-    "beefyPerformanceFee": 0.045,
+    "moofiPerformanceFee": 0.045,
     "vaultApy": 2.1057844292858614,
     "lpFee": 0.005,
     "tradingApr": 0.22324214039526927,
@@ -69,8 +69,7 @@ Each of these fields within the structure are:
 
 - **vaultApr** - Yearly rewards in USD divided by total staked in USD.
 - **compoundingsPerYear** - The estimated compounding events. This is an internal field and references the value used within the calculation for this project.
-- **beefyPerformanceFee** - The flat Beefy performance fee included in the calculation. This is an internal field for reference.
-- **vaultApy** - The vaultApr compounded, using compoundingsPerYear and beefyPerformanceFee in the calculation.
+- **vaultApy** - The vaultApr compounded, using compoundingsPerYear and moofiPerformanceFee in the calculation.
 - **lpFee** - The Liquidity Provider (LP) fee per trade. This is an internal field for reference.
 - **tradingApr** - Annual interest from trading fees, not compounded.
 - **totalApy** - The known Total APY. Where fields are available to calculate the Total APY including trading fees, this is calculated. The final calculation is totalApy = (1 + vaultApr) \* (1 + (compounded tradingApr)) - 1.
@@ -80,32 +79,6 @@ After you start the API it can take a minute or two before you can fetch the APY
 #### **/prices** All token prices under the same endpoint (crosschain).
 
 #### **/lps**: All liqudity pair prices under a single endpoint (crosschain).
-
----
-
-### Consumed by the [dashboard](https://dashboard.beefy.finance)
-
-#### **/earnings**: Used to display the total and daily earnings of the platform
-
-#### **/holders**: Used to display the total number of holders. This calc takes into account users with 0 BIFI in their wallet, but BIFI staked in the reward pool
-
----
-
-### Consumed by third party platforms
-
-#### **/cmc**: Custom endpoint required by [CoinMarketCap](https://coinmarketcap.com/) to display our vaults in their yield farming section
-
-#### **/supply**: Used by [Coingecko](https://coingecko.com) to display BIFI's total supply and circulating supply
-
----
-
----
-
-## Contribute
-
-Beefy.Finance exists thanks to its contributors. There are many ways you can participate and help build high quality software. Check out the [contribution guide](CONTRIBUTING.md)!
-
----
 
 ---
 

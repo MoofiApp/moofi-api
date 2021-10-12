@@ -44,10 +44,10 @@ const getFarmWithTradingFeesApy = (
   tradingApr,
   compoundingsPerYear,
   t,
-  shareAfterBeefyPerformanceFee
+  shareAfterMoofiPerformanceFee
 ) => {
   const farmApy = farmApr
-    ? compound(farmApr, compoundingsPerYear, t, shareAfterBeefyPerformanceFee)
+    ? compound(farmApr, compoundingsPerYear, t, shareAfterMoofiPerformanceFee)
     : 0;
   const tradingApy = tradingApr ? compound(tradingApr, compoundingsPerYear, t, 1) : 0; // no fee on trading
   const finalAPY = (1 + farmApy) * (1 + tradingApy) - 1;

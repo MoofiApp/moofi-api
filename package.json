@@ -1,7 +1,7 @@
 {
-  "name": "beefy-api",
+  "name": "moofi-api",
   "version": "1.0.0",
-  "repository": "beefyfinance/beefy-api",
+  "repository": "MoofiApp/moofi-api",
   "license": "MIT",
   "scripts": {
     "install-all": "yarn && cd packages/address-book && yarn",

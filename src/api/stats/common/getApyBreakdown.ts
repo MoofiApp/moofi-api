@@ -5,12 +5,12 @@ import BigNumber from 'bignumber.js';
 import getFarmWithTradingFeesApy from '../../../utils/getFarmWithTradingFeesApy';
 import { compound } from '../../../utils/compound';
 
-import { BASE_HPY, BEEFY_PERFORMANCE_FEE, SHARE_AFTER_PERFORMANCE_FEE } from '../../../constants';
+import { BASE_HPY, MOOFI_PERFORMANCE_FEE, SHARE_AFTER_PERFORMANCE_FEE } from '../../../constants';
 
 export interface ApyBreakdown {
   vaultApr?: number;
   compoundingsPerYear?: number;
-  beefyPerformanceFee?: number;
+  moofiPerformanceFee?: number;
   vaultApy?: number;
   lpFee?: number;
   tradingApr?: number;
@@ -27,7 +27,7 @@ export default function (
   tradingAprs: Record<string, BigNumber>,
   farmAprs: BigNumber[],
   providerFee: number,
-  performanceFee: number = BEEFY_PERFORMANCE_FEE
+  performanceFee: number = MOOFI_PERFORMANCE_FEE
 ): ApyBreakdownResult {
   const result: ApyBreakdownResult = {
     apys: {},
@@ -52,7 +52,7 @@ export default function (
     result.apyBreakdowns[pool.name] = {
       vaultApr: vaultApr,
       compoundingsPerYear: BASE_HPY,
-      beefyPerformanceFee: performanceFee,
+      moofiPerformanceFee: performanceFee,
       vaultApy: vaultApy,
       lpFee: providerFee,
       tradingApr: tradingApr,

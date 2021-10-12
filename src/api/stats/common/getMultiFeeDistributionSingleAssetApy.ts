@@ -6,7 +6,7 @@ import {
 } from '../../../abis/common/MultiFeeDistribution';
 import fetchPrice from '../../../utils/fetchPrice';
 import { compound } from '../../../utils/compound';
-import { BASE_HPY, BEEFY_PERFORMANCE_FEE, SHARE_AFTER_PERFORMANCE_FEE } from '../../../constants';
+import { BASE_HPY, MOOFI_PERFORMANCE_FEE, SHARE_AFTER_PERFORMANCE_FEE } from '../../../constants';
 import Web3 from 'web3';
 import { ApyBreakdownResult } from './getApyBreakdown';
 import Token from '../../../../packages/address-book/types/token';
@@ -81,7 +81,7 @@ const getBreakdown = (poolName: string, apr: BigNumber): ApyBreakdownResult => {
     vaultApy: vaultApy,
     totalApy: totalApy,
     compoundingsPerYear: BASE_HPY,
-    beefyPerformanceFee: BEEFY_PERFORMANCE_FEE,
+    moofiPerformanceFee: MOOFI_PERFORMANCE_FEE,
   };
   return result;
 };
