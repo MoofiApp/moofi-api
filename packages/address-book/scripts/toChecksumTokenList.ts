@@ -7,7 +7,10 @@ import transformTokenListToObject from '../util/transfomTokenListToObject';
 import chainIdMap from '../util/chainIdMap';
 
 const tokenLists = {
-  moonriver: ['https://raw.githubusercontent.com/moonfarmin/tokenlist/master/tokens.json'],
+  moonriver: [
+    'https://raw.githubusercontent.com/moonfarmin/tokenlist/master/tokens.json',
+    'https://raw.githubusercontent.com/solarbeamio/solarbeam-interface/4cc5a1b9b8359575a59cc1249c9fa044263b6ab9/src/constants/token-lists/solarbeam.tokenlist.json',
+  ],
 };
 
 const toChecksumTokenList = (tokens: Token[]): void => {

@@ -49,15 +49,8 @@ const MOONRIVER_RPC = process.env.MOONRIVER_RPC || 'https://rpc.moonriver.moonbe
 
 const MOONRIVER_CHAIN_ID = ChainId.moonriver;
 
-const DFYN_LPF = 0.003;
-const SUSHI_LPF = 0.0025;
-const QUICK_LPF = 0.003;
-const APEPOLY_LPF = 0.0015;
-const COMETH_LPF = 0.005;
-const PCS_LPF = 0.003;
-const APE_LPF = 0.002;
-const SPOOKY_LPF = 0.002;
 const MOON_LPF = 0.003;
+const SOLAR_LPF = 0.005;
 
 const MULTICHAIN_RPC: Record<ChainId, string> = {
   [ChainId.moonriver]: MOONRIVER_RPC,
@@ -96,15 +89,8 @@ export {
   FORTUBE_API_TOKEN,
   MULTICHAIN_RPC,
   MULTICHAIN_ENDPOINTS,
-  DFYN_LPF,
-  SUSHI_LPF,
-  QUICK_LPF,
-  APEPOLY_LPF,
-  COMETH_LPF,
-  PCS_LPF,
-  APE_LPF,
-  SPOOKY_LPF,
   MOON_LPF,
+  SOLAR_LPF,
   BEEFY_PERFORMANCE_FEE,
   SHARE_AFTER_PERFORMANCE_FEE,
   ENV,

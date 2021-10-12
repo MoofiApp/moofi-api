@@ -86,8 +86,8 @@ const _tokens = {
       'https://pancakeswap.finance/images/tokens/0xe9e7cea3dedca5984780bafc599bd69add087d56.png',
   },
   mSWAP: {
-    name: 'BUSD Token',
-    symbol: 'MoonSwap Token',
+    name: 'MoonSwap Token',
+    symbol: 'mSWAP',
     address: '0xB3FB48bF090bEDFF4f6F93FFb40221742E107db7',
     chainId: 1285,
     decimals: 18,
@@ -95,6 +95,16 @@ const _tokens = {
     description: '',
     logoURI:
       'https://raw.githubusercontent.com/moonfarmin/moonfarm-contracts-v2/master/images/moonswap.png',
+  },
+  SOLAR: {
+    name: 'SOLAR',
+    symbol: 'SolarBeam Token',
+    address: '0x6bD193Ee6D2104F14F94E2cA6efefae561A4334B',
+    chainId: 1285,
+    decimals: 18,
+    website: 'https://solarbeam.io',
+    description: '',
+    logoURI: 'https://solarbeam.io/nextimg/%2Fimages%2Ftokens%2Fsolar.png',
   },
 } as const;
 

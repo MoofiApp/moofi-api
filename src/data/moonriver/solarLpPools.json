@@ -1,0 +1,21 @@
+[
+  {
+    "name": "solar-solar-usdc",
+    "address": "0xdb66be1005f5fe1d2f486e75ce3c50b52535f886",
+    "decimals": "1e18",
+    "poolId": 7,
+    "chainId": 1285,
+    "lp0": {
+      "address": "0x6bD193Ee6D2104F14F94E2cA6efefae561A4334B",
+      "oracle": "tokens",
+      "oracleId": "SOLAR",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
+      "oracle": "tokens",
+      "oracleId": "USDC",
+      "decimals": "1e6"
+    }
+  }
+]

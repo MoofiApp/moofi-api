@@ -3,12 +3,15 @@ import { MOON_LPF } from '../../../constants';
 
 const MasterChefAbi = require('../../../abis/MasterChef.json');
 const pools = require('../../../data/moonriver/moonfarmLpPools.json');
+const {
+  moonfarm,
+} = require('../../../../packages/address-book/address-book/moonriver/platforms/moonfarm');
 
 const getMoonfarmApys = async () =>
   await getMasterChefApys({
-    masterchef: '0x78Aa55Ce0b0DC7488d2C38BD92769f4d0C8196Ff',
+    masterchef: moonfarm.masterchef,
     tokenPerBlock: 'moonfarmPerBlock',
-    hasMultiplier: false,
+    hasMultiplier: true,
     pools: pools,
     oracleId: 'MOON',
     oracle: 'tokens',

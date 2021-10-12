@@ -12,6 +12,7 @@
     "prettier:fix": "prettier --write src/**/*",
     "prepare": "husky install",
     "moonriver:moonfarm:add": "ts-node scripts/add-farm.ts --network moonriver --project moonfarm",
+    "moonriver:solar:add": "ts-node scripts/add-farm.ts --network moonriver --project solar",
     "gen-abi-types": "abi-types-generator ./src/abis/matic/Telxchange/StakingRewards/StakingRewards.json --output='./src/abis/matic/Telxchange/StakingRewards/types'"
   },
   "dependencies": {

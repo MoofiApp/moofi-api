@@ -1,5 +1,6 @@
 import { mofi } from './platforms/mofi';
 import { moonfarm } from './platforms/moonfarm';
+import { solar } from './platforms/solar';
 import Chain from '../../types/chain';
 import { ConstInterface } from '../../types/const';
 import { tokens } from './tokens/tokens';
@@ -9,6 +10,7 @@ const _moonriver = {
   platforms: {
     mofi,
     moonfarm,
+    solar,
   },
   tokens,
   tokenAddressMap: convertSymbolTokenMapToAddressTokenMap(tokens),
