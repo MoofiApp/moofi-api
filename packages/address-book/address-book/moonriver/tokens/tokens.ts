@@ -106,6 +106,28 @@ const _tokens = {
     description: '',
     logoURI: 'https://solarbeam.io/nextimg/%2Fimages%2Ftokens%2Fsolar.png',
   },
+  WBTC: {
+    name: 'Wrapped BTC',
+    symbol: 'WBTC',
+    address: '0x6aB6d61428fde76768D7b45D8BFeec19c6eF91A8',
+    chainId: 1285,
+    decimals: 8,
+    logoURI:
+      'https://solarbeam.io/nextimg/https%3A%2F%2Fsolarbeam.io%2Fimages%2Ftokens%2Fwbtc.png/32/50?url=https%3A%2F%2Fsolarbeam.io%2Fimages%2Ftokens%2Fwbtc.png&w=32&q=50',
+    website: 'https://bitcoin.org/en/',
+    description: '',
+  },
+  miMatic: {
+    name: 'MAI',
+    symbol: 'miMatic',
+    address: '0x7f5a79576620C046a293F54FFCdbd8f2468174F1',
+    chainId: 1285,
+    decimals: 18,
+    logoURI:
+      'https://solarbeam.io/nextimg/https%3A%2F%2Fsolarbeam.io%2Fimages%2Ftokens%2Fmimatic.png/32/50?url=https%3A%2F%2Fsolarbeam.io%2Fimages%2Ftokens%2Fmimatic.png&w=32&q=50',
+    website: '',
+    description: '',
+  },
 } as const;
 
 export const tokens: ConstRecord<typeof _tokens, Token> = _tokens;
