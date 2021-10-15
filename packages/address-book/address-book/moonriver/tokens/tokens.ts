@@ -128,6 +128,17 @@ const _tokens = {
     website: '',
     description: '',
   },
+  NEKU: {
+    name: 'Neku Finance',
+    symbol: 'NEKU',
+    address: '0x3Bf0880fd26E49c46d1A1e69ADb268889B4be840',
+    chainId: 1285,
+    decimals: 18,
+    logoURI:
+      'https://app.solarbeam.io/nextimg/https%3A%2F%2Fraw.githubusercontent.com%2Fsolarbeamio%2Fassets%2Fmaster%2Fblockchains%2Fmoonriver%2Fassets%2F0x3Bf0880fd26E49c46d1A1e69ADb268889B4be840%2Flogo.png/48/50?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsolarbeamio%2Fassets%2Fmaster%2Fblockchains%2Fmoonriver%2Fassets%2F0x3Bf0880fd26E49c46d1A1e69ADb268889B4be840%2Flogo.png&w=48&q=50',
+    website: '',
+    description: '',
+  },
 } as const;
 
 export const tokens: ConstRecord<typeof _tokens, Token> = _tokens;
