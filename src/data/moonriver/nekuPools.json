@@ -1,0 +1,12 @@
+[
+  {
+    "name": "neku-dai",
+    "poolId": 5,
+    "chainId": 1285,
+    "address": "0x80A16016cC4A2E6a2CACA8a4a498b1699fF0f844",
+    "cAddress": "0x70faf3509dc8320faffb40666d717224b26af0db",
+    "decimals": "1e18",
+    "oracle": "tokens",
+    "oracleId": "DAI"
+  }
+]

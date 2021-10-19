@@ -6,6 +6,7 @@ export interface LpPool {
   platform?: string;
   rewardPool?: string;
   address: string;
+  cAddress?: string;
   strat?: string;
   decimals: string;
   poolId?: number;
@@ -22,6 +23,7 @@ export interface SingleAssetPool {
   farmType?: string;
   poolId?: number;
   address: string;
+  cAddress?: string;
   strat?: string;
   oracle?: string;
   oracleId?: string;

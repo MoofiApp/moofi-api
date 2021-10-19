@@ -1,7 +1,8 @@
 const { getMoonfarmApys } = require('./getMoonfarmApys');
 const { getSolarApys } = require('./getSolarApys');
+const { getNekuApys } = require('./getNekuApys');
 
-const getApys = [getMoonfarmApys, getSolarApys];
+const getApys = [getMoonfarmApys, getSolarApys, getNekuApys];
 
 const BATCH_SIZE = 15;
 

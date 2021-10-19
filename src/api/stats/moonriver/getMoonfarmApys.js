@@ -1,5 +1,6 @@
-const { getMasterChefApys } = require('./getMoonriverMasterChefApys');
-import { MOON_LPF } from '../../../constants';
+const { getMasterChefApys } = require('../common/getMasterChefApys');
+import { moonriverWeb3 } from '../../../utils/web3';
+import { MOON_LPF, MOONRIVER_CHAIN_ID } from '../../../constants';
 
 const MasterChefAbi = require('../../../abis/MasterChef.json');
 const pools = require('../../../data/moonriver/moonfarmLpPools.json');
@@ -10,6 +11,8 @@ const {
 
 const getMoonfarmApys = async () =>
   await getMasterChefApys({
+    web3: moonriverWeb3,
+    chainId: MOONRIVER_CHAIN_ID,
     masterchef: moonfarm.masterchef,
     tokenPerBlock: 'moonfarmPerBlock',
     hasMultiplier: true,

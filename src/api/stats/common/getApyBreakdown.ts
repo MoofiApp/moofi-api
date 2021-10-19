@@ -36,6 +36,9 @@ export default function (
 
   pools.forEach((pool, i) => {
     const simpleApr = farmAprs[i]?.toNumber();
+    if (simpleApr === -1) {
+      return;
+    }
     const vaultApr = simpleApr * SHARE_AFTER_PERFORMANCE_FEE;
     const vaultApy = compound(simpleApr, BASE_HPY, 1, SHARE_AFTER_PERFORMANCE_FEE);
     const tradingApr = tradingAprs[pool.address.toLowerCase()]?.toNumber();

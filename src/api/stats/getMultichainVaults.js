@@ -2,10 +2,10 @@ const getVaults = require('../../utils/getVaults.js');
 const { getStrategies } = require('../../utils/getStrategies.js');
 const { getLastHarvests } = require('../../utils/getLastHarvests.js');
 
-const { MULTICHAIN_ENDPOINTS } = require('../../constants');
+const { MULTICHAIN_ENDPOINTS, ENV } = require('../../constants');
 
-const INIT_DELAY = 0 * 1000;
-const REFRESH_INTERVAL = 5 * 60 * 1000;
+const INIT_DELAY = ENV === 'development' ? 0 : 1 * 60 * 1000;
+const REFRESH_INTERVAL = ENV === 'development' ? 10 * 1000 : 5 * 60 * 1000;
 
 let multichainVaults = [];
 var multichainVaultsCounter = 0;

@@ -1,8 +1,8 @@
 const { getMoonriverApys } = require('./moonriver');
+import { ENV } from '../../constants';
 
-// const INIT_DELAY = 60 * 1000;
-const INIT_DELAY = 0;
-const REFRESH_INTERVAL = 15 * 60 * 1000;
+const INIT_DELAY = ENV === 'development' ? 0 : 1 * 60 * 1000;
+const REFRESH_INTERVAL = ENV === 'development' ? 10 * 1000 : 15 * 60 * 1000;
 
 let apys = {};
 let apyBreakdowns = {};
