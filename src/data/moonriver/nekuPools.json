@@ -8,5 +8,55 @@
     "decimals": "1e18",
     "oracle": "tokens",
     "oracleId": "DAI"
+  },
+  {
+    "name": "neku-neth",
+    "poolId": 6,
+    "chainId": 1285,
+    "address": "0x639A647fbe20b6c8ac19E48E2de44ea792c62c5C",
+    "cAddress": "0xB5Dc005D89D0b4D0bC4a9459C7f77A403e9bFEea",
+    "decimals": "1e18",
+    "oracle": "tokens",
+    "oracleId": "ETH"
+  },
+  {
+    "name": "neku-nbusd",
+    "poolId": 3,
+    "chainId": 1285,
+    "address": "0x5D9ab5522c64E1F6ef5e3627ECCc093f56167818",
+    "cAddress": "0x3631dE81f1098dF530015a97b092bdFfF7e93Ea8",
+    "decimals": "1e18",
+    "oracle": "tokens",
+    "oracleId": "BUSD"
+  },
+  {
+    "name": "neku-nusdc",
+    "poolId": 2,
+    "chainId": 1285,
+    "address": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
+    "cAddress": "0x8153303F72aB12f13180c946723BCACAe05A4C4a",
+    "decimals": "1e18",
+    "oracle": "tokens",
+    "oracleId": "USDC"
+  },
+  {
+    "name": "neku-nwbtc",
+    "poolId": 7,
+    "chainId": 1285,
+    "address": "0x6aB6d61428fde76768D7b45D8BFeec19c6eF91A8",
+    "cAddress": "0x7061adf5b2AF1542219de8D94e5C3DdF370a1cd6",
+    "decimals": "1e18",
+    "oracle": "tokens",
+    "oracleId": "WBTC"
+  },
+  {
+    "name": "neku-nneku",
+    "poolId": 1,
+    "chainId": 1285,
+    "address": "0x3Bf0880fd26E49c46d1A1e69ADb268889B4be840",
+    "cAddress": "0xDF19d746b5Ab2B7b040dAf0eC3341000cFE17bae",
+    "decimals": "1e18",
+    "oracle": "tokens",
+    "oracleId": "NEKU"
   }
 ]
