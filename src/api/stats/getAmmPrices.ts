@@ -5,12 +5,13 @@ import { fetchAmmPrices } from '../../utils/fetchAmmPrices';
 import getNonAmmPrices from './getNonAmmPrices';
 import moonfarmPools from '../../data/moonriver/moonfarmLpPools.json';
 import solarPools from '../../data/moonriver/solarLpPools.json';
+import huckleberryPools from '../../data/moonriver/huckleberryLpPools.json';
 import { ENV } from '../../constants';
 
 const INIT_DELAY = ENV === 'development' ? 0 : 1 * 60 * 1000;
 const REFRESH_INTERVAL = ENV === 'development' ? 10 * 1000 : 5 * 60 * 1000;
 
-const pools = [...moonfarmPools, ...solarPools];
+const pools = [...moonfarmPools, ...solarPools, ...huckleberryPools];
 
 const knownPrices = {
   BUSD: 1,
@@ -20,6 +21,8 @@ const knownPrices = {
   USDC: 1,
   UST: 1,
   USDN: 1,
+  'USDC.m': 1,
+  'USDT.m': 1,
 };
 
 let tokenPricesCache: Promise<any>;

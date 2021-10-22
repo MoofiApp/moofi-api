@@ -16,6 +16,7 @@ import getApyBreakdown, { ApyBreakdownResult } from '../common/getApyBreakdown';
 import Web3 from 'web3';
 import { ChainId } from '../../../../packages/address-book/types/chainid';
 import getBlockTime from '../../../utils/getBlockTime';
+import getLastBlockTimes from '../../../utils/getLastBlockTimes';
 
 export interface MasterChefApysParams {
   web3: Web3;
@@ -24,6 +25,7 @@ export interface MasterChefApysParams {
   masterchefAbi?: AbiItem[];
   tokenPerBlock: string;
   hasMultiplier: boolean;
+  multiplierCalculatedFromTime?: boolean;
   singlePools?: SingleAssetPool[];
   pools?: LpPool[] | (LpPool | SingleAssetPool)[];
   cTokenAbi?: any;
@@ -130,10 +132,15 @@ const getMasterChefData = async (params: MasterChefApysParams) => {
   const abi = params.masterchefAbi ?? chefAbi(params.tokenPerBlock);
   const masterchefContract = new params.web3.eth.Contract(abi, params.masterchef);
   let multiplier = new BigNumber(1);
-  if (params.hasMultiplier) {
+  if (params.hasMultiplier && !params.multiplierCalculatedFromTime) {
     const blockNum = await getBlockNumber(params.chainId);
     multiplier = new BigNumber(
       await masterchefContract.methods.getMultiplier(blockNum - 1, blockNum).call()
+    );
+  } else if (params.hasMultiplier && params.multiplierCalculatedFromTime) {
+    const { last, current } = await getLastBlockTimes(params.chainId);
+    multiplier = new BigNumber(
+      await masterchefContract.methods.getMultiplier(last, current).call()
     );
   }
   const blockRewards = new BigNumber(

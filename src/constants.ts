@@ -51,6 +51,7 @@ const MOONRIVER_CHAIN_ID = ChainId.moonriver;
 
 const MOON_LPF = 0.003;
 const SOLAR_LPF = 0.005;
+const HUCKLE_LPF = 0.003;
 
 const MULTICHAIN_RPC: Record<ChainId, string> = {
   [ChainId.moonriver]: MOONRIVER_RPC,
@@ -91,6 +92,7 @@ export {
   MULTICHAIN_ENDPOINTS,
   MOON_LPF,
   SOLAR_LPF,
+  HUCKLE_LPF,
   MOOFI_PERFORMANCE_FEE,
   SHARE_AFTER_PERFORMANCE_FEE,
   ENV,
