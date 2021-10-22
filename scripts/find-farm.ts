@@ -1,6 +1,7 @@
 import { ChainId } from '../packages/address-book/address-book';
 import { moonfarm } from '../packages/address-book/address-book/moonriver/platforms/moonfarm';
 import { solar } from '../packages/address-book/address-book/moonriver/platforms/solar';
+import { huckleberry } from '../packages/address-book/address-book/moonriver/platforms/huckleberry';
 
 const yargs = require('yargs');
 
@@ -13,14 +14,13 @@ const ERC20ABI = require('../src/abis/ERC20.json');
 
 const projects = {
   moonfarm: {
-    prefix: 'moonfarm',
-    file: '../src/data/moonriver/moonfarmLpPools.json',
     masterchef: moonfarm.masterchef,
   },
   solar: {
-    prefix: 'solar',
-    file: '../src/data/moonriver/solarLpPools.json',
     masterchef: solar.masterchef,
+  },
+  huckleberry: {
+    masterchef: huckleberry.masterchef,
   },
 };
 

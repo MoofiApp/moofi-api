@@ -139,6 +139,36 @@ const _tokens = {
     website: '',
     description: '',
   },
+  'USDC.m': {
+    name: 'USDC@moonriver',
+    symbol: 'USDC.m',
+    address: '0x748134b5F553F2bcBD78c6826De99a70274bDEb3',
+    chainId: 1285,
+    decimals: 6,
+    logoURI: 'https://token-icons.vercel.app/icon/others/wanUSDC.png',
+    website: '',
+    description: '',
+  },
+  'USDT.m': {
+    name: 'USDT@moonriver',
+    symbol: 'USDT.m',
+    address: '0xE936CAA7f6d9F5C9e907111FCAf7c351c184CDA7',
+    chainId: 1285,
+    decimals: 6,
+    logoURI: 'https://token-icons.vercel.app/icon/others/wanUSDT.png',
+    website: '',
+    description: '',
+  },
+  FINN: {
+    name: 'FINN Token',
+    symbol: 'FINN',
+    address: '0x9A92B5EBf1F6F6f7d93696FCD44e5Cf75035A756',
+    chainId: 1285,
+    decimals: 18,
+    logoURI: 'https://www.huckleberry.finance/static/media/02.edc46c96.png',
+    website: '',
+    description: '',
+  },
 } as const;
 
 export const tokens: ConstRecord<typeof _tokens, Token> = _tokens;

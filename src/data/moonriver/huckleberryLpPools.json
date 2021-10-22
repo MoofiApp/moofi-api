@@ -1,0 +1,40 @@
+[
+  {
+    "name": "huckle-wmovr-finn",
+    "address": "0xbBe2f34367972Cb37ae8dea849aE168834440685",
+    "decimals": "1e18",
+    "poolId": 4,
+    "chainId": 1285,
+    "lp0": {
+      "address": "0x98878B06940aE243284CA214f92Bb71a2b032B8A",
+      "oracle": "tokens",
+      "oracleId": "WMOVR",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0x9A92B5EBf1F6F6f7d93696FCD44e5Cf75035A756",
+      "oracle": "tokens",
+      "oracleId": "FINN",
+      "decimals": "1e18"
+    }
+  },
+  {
+    "name": "huckle-usdc.m-usdt.m",
+    "address": "0xce634Ae7191aB885Fb4ce8d1ed58f80EA988D52a",
+    "decimals": "1e18",
+    "poolId": 5,
+    "chainId": 1285,
+    "lp0": {
+      "address": "0x748134b5F553F2bcBD78c6826De99a70274bDEb3",
+      "oracle": "tokens",
+      "oracleId": "USDC.m",
+      "decimals": "1e6"
+    },
+    "lp1": {
+      "address": "0xE936CAA7f6d9F5C9e907111FCAf7c351c184CDA7",
+      "oracle": "tokens",
+      "oracleId": "USDT.m",
+      "decimals": "1e6"
+    }
+  }
+]
